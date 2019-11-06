@@ -1,32 +1,42 @@
-# Need enterprise license for CDC
 SET CLUSTER SETTING cluster.organization = '';
 SET CLUSTER SETTING enterprise.license = '';
 SET CLUSTER SETTING kv.rangefeed.enabled=true;
 
 create database cis;
 
-create user maxroach with password maxroach;
-
-grant admin to maxroach;
-
 use cis;
 
 create table customers
 (
-  id UUID,
+  customer_id UUID,
   name string,
   street string,
   city string,
   state string(2),
   zip int,
   people int,
-  revenue decimal,
-  PRIMARY KEY(id)
+  revenue decimal(10,2),
+  PRIMARY KEY(customer_id)
 );
 
-CREATE CHANGEFEED FOR TABLE customers INTO 'kafka://broker:9092?topic_prefix=cis_';
+CREATE CHANGEFEED FOR TABLE customers INTO 'kafka://broker:29092?topic_prefix=cis_json_' WITH updated, format = json, confluent_schema_registry = 'http://schema-registry:8081';
+CREATE CHANGEFEED FOR TABLE customers INTO 'kafka://broker:29092?topic_prefix=cis_avro_' WITH updated, format = experimental_avro, confluent_schema_registry = 'http://schema-registry:8081';
 
 SHOW JOBS;
+
+create table customers_in
+(
+  customer_id UUID,
+  name string,
+  street string,
+  city string,
+  state string(2),
+  zip int,
+  people int,
+  revenue decimal(10,2),
+  ts string not null,
+  PRIMARY KEY(customer_id)
+);
 
 create table customers_audit
 (
@@ -50,3 +60,8 @@ update customers set
 street = '9 Madison Ave'
 where name = 'Chris';
 ;
+
+create user maxroach;
+grant ALL on cis.* to maxroach;
+alter user maxroach with password maxroach;
+grant admin to maxroach;

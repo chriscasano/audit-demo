@@ -33,6 +33,7 @@ services:
     environment:
       KAFKA_BROKER_ID: 2
       KAFKA_ZOOKEEPER_CONNECT: 'zookeeper:2181'
+      #KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:29092,PLAINTEXT_HOST://0.0.0.0:9092
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
       KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://broker:29092,PLAINTEXT_HOST://localhost:9092
       KAFKA_METRIC_REPORTERS: io.confluent.metrics.reporter.ConfluentMetricsReporter
@@ -52,7 +53,7 @@ services:
       - zookeeper
       - broker
     ports:
-      - "8085:8085"
+      - "8081:8081"
     environment:
       SCHEMA_REGISTRY_HOST_NAME: schema-registry
       SCHEMA_REGISTRY_KAFKASTORE_CONNECTION_URL: 'zookeeper:2181'
@@ -79,9 +80,10 @@ services:
       CONNECT_OFFSET_STORAGE_REPLICATION_FACTOR: 1
       CONNECT_STATUS_STORAGE_TOPIC: docker-connect-status
       CONNECT_STATUS_STORAGE_REPLICATION_FACTOR: 1
-      CONNECT_KEY_CONVERTER: org.apache.kafka.connect.storage.StringConverter
+      CONNECT_KEY_CONVERTER: io.confluent.connect.avro.AvroConverter
+      CONNECT_KEY_CONVERTER_SCHEMA_REGISTRY_URL: http://schema-registry:8081
       CONNECT_VALUE_CONVERTER: io.confluent.connect.avro.AvroConverter
-      CONNECT_VALUE_CONVERTER_SCHEMA_REGISTRY_URL: http://schema-registry:8085
+      CONNECT_VALUE_CONVERTER_SCHEMA_REGISTRY_URL: http://schema-registry:8081
       CONNECT_INTERNAL_KEY_CONVERTER: "org.apache.kafka.connect.json.JsonConverter"
       CONNECT_INTERNAL_VALUE_CONVERTER: "org.apache.kafka.connect.json.JsonConverter"
       CONNECT_ZOOKEEPER_CONNECT: 'zookeeper:2181'
@@ -91,6 +93,8 @@ services:
       CONNECT_CONSUMER_INTERCEPTOR_CLASSES: "io.confluent.monitoring.clients.interceptor.MonitoringConsumerInterceptor"
       CONNECT_PLUGIN_PATH: "/usr/share/java,/usr/share/confluent-hub-components"
       CONNECT_LOG4J_LOGGERS: org.apache.zookeeper=ERROR,org.I0Itec.zkclient=ERROR,org.reflections=ERROR
+    volumes:
+      - ${PWD}/connect:/etc/kafka-connect-cockroach
 
   control-center:
     image: confluentinc/cp-enterprise-control-center:5.3.1
@@ -109,7 +113,7 @@ services:
       CONTROL_CENTER_CONNECT_CLUSTER: 'connect:8083'
       CONTROL_CENTER_KSQL_URL: "http://ksql-server:8088"
       CONTROL_CENTER_KSQL_ADVERTISED_URL: "http://localhost:8088"
-      CONTROL_CENTER_SCHEMA_REGISTRY_URL: "http://schema-registry:8085"
+      CONTROL_CENTER_SCHEMA_REGISTRY_URL: "http://schema-registry:8081"
       CONTROL_CENTER_REPLICATION_FACTOR: 1
       CONTROL_CENTER_INTERNAL_TOPICS_PARTITIONS: 1
       CONTROL_CENTER_MONITORING_INTERCEPTOR_TOPIC_PARTITIONS: 1
@@ -126,6 +130,7 @@ services:
     ports:
       - "8090:8080"
       - "8091:8081"
+      - "5432:5432"
     depends_on:
       - roach-0
       - roach-1
@@ -145,7 +150,7 @@ services:
     container_name: roach-0
     hostname: roach-0
     image: cockroachdb/cockroach:v19.1.5
-    command: start --logtostderr=WARNING --certs-dir=/certs --listen-addr=roach-0:26257 --advertise-addr=roach-0:26257
+    command: start --logtostderr=WARNING --insecure --listen-addr=roach-0:26257 --advertise-addr=roach-0:26257
     volumes:
       - certs-roach-0:/certs
       - ${PWD}/sql:/cockroach/sql
@@ -156,7 +161,7 @@ services:
     container_name: roach-1
     hostname: roach-1
     image: cockroachdb/cockroach:v19.1.5
-    command: start --logtostderr=WARNING --certs-dir=/certs --join=roach-0 --listen-addr=roach-1:26257 --advertise-addr=roach-1:26257
+    command: start --logtostderr=WARNING --insecure --join=roach-0 --listen-addr=roach-1:26257 --advertise-addr=roach-1:26257
     volumes:
       - certs-roach-1:/certs
     depends_on:
@@ -167,7 +172,7 @@ services:
     container_name: roach-2
     hostname: roach-2
     image: cockroachdb/cockroach:v19.1.5
-    command: start --logtostderr=WARNING --certs-dir=/certs --join=roach-0 --listen-addr=roach-2:26257 --advertise-addr=roach-2:26257
+    command: start --logtostderr=WARNING --insecure --join=roach-0 --listen-addr=roach-2:26257 --advertise-addr=roach-2:26257
     volumes:
       - certs-roach-2:/certs
     depends_on:

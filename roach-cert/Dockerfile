@@ -13,8 +13,6 @@ ARG DEBIAN_FRONTEND=noninteractive
 # todo: see if i can fix the slowness.  is this not specifying correct alias for create-node
 # todo: should secure run under something than 8080
 
-LABEL maintainer="tjveil@gmail.com"
-
 ARG CRDB_DOWNLOAD_URL=https://binaries.cockroachdb.com/cockroach-latest.linux-amd64.tgz
 ARG CRDB_DOWNLOAD_DIR=/tmp/crdb
 ARG CRDB_HOME=/opt/crdb
@@ -56,8 +54,6 @@ RUN cockroach cert create-node roach-2 --certs-dir=/tmp/certs/roach-2 --ca-key=/
 # Stage 2 - share certs
 
 FROM alpine:latest
-
-LABEL maintainer="tjveil@gmail.com"
 
 RUN mkdir -pv /certs/roach-0 /certs/roach-1 /certs/roach-2
 
