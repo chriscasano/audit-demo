@@ -1,25 +1,30 @@
-## Wait!  Before you run anything...
+# Audit Demo
+
+This demo shows how to create an audit table in CockroachDB using change data capture.
+
+### Before you run anything...
 
 Before you kickoff Docker Compose, be sure to update your Cockroach Organization and License in sql/audit_table.sql file since this demo uses CHANGEFEED which is under the enterprise license
 
 
+### Run
 
-## Run
-docker-compose up --build
+`docker-compose up --build`
 
-## Connect to Cockroach and run the audit script
+### Connect to Cockroach and run the audit script
 
-/cockroach/cockroach sql --insecure --host roach-0 < sql/audit_table_KEYS.sql
-
-
-## Test Kafka consumption
-
-docker exec -it connect /bin/bash
-/usr/bin/kafka-avro-console-consumer --bootstrap-server broker:29092 --property schema.registry.url=http://schema-registry:8081 --topic cis_avro_customers --from-beginning
+`/cockroach/cockroach sql --insecure --host roach-0 < sql/audit_table_KEYS.sql`
 
 
-## UIs
+### Test Kafka consumption
 
-Confluent Control Center: http://localhost:9021/clusters
+`docker exec -it connect /bin/bash`
+
+`/usr/bin/kafka-avro-console-consumer --bootstrap-server broker:29092 --property schema.registry.url=http://schema-registry:8081 --topic cis_avro_customers --from-beginning`
+
+
+### UIs
+
+Control Center: http://localhost:9021/clusters
 
 Cockroach UI: http://localhost:8090
