@@ -2,6 +2,8 @@
 
 This demo shows how to create an audit table in CockroachDB using change data capture.
 
+![Audit Demo][/images/Audit_Demo.png]
+
 ### Before you run anything...
 
 Before you kickoff Docker Compose, be sure to update your Cockroach Organization and License in sql/audit_table.sql file since this demo uses CHANGEFEED which is under the enterprise license

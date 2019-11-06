@@ -40,13 +40,15 @@ create table customers_in
 
 create table customers_audit
 (
+  customer_id UUID not null,
   ts timestamp not null,
   attribute string not null,
   previous string,
   new string,
   action string,
-  PRIMARY KEY (ts, attribute)
+  PRIMARY KEY (customer_id, ts, attribute)
 );
+
 
 insert into customers values
 (gen_random_uuid(), 'Chris', '1 Happpy St', 'Merrick', 'NY', '11566', 1, 1.380),
