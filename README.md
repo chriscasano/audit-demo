@@ -2,7 +2,7 @@
 
 This demo shows how to create an audit table in CockroachDB using change data capture.
 
-![Audit Demo][/images/Audit_Demo.png]
+![Audit Demo](/images/Audit_Demo.png)
 
 ### Before you run anything...
 
