@@ -1,8 +1,8 @@
 # Audit Demo
 
 This demo shows how to create an audit table in CockroachDB using change data capture.  You can run this demo using 1 of the following two methods.
-1) Docker-Compose
-2) Roachprod (preferred)
+1) Docker-Compose (Stable)
+2) Roachprod (In Development)
 
 
 ![Audit Demo](/images/Audit_Demo.png)
@@ -13,8 +13,7 @@ This demo shows how to create an audit table in CockroachDB using change data ca
 
 Be sure to update your Cockroach Organization and License in sql/audit_table.sql file since this demo uses CHANGEFEED which is under the enterprise license
 
-
-### Run it
+### Bring It Up
 
 `docker-compose up --build`
 
@@ -25,6 +24,16 @@ Be sure to update your Cockroach Organization and License in sql/audit_table.sql
 ### If desired, test Kafka consumption
 
 `docker-compose exec -T connect /usr/bin/kafka-console-consumer --bootstrap-server broker:29092 --property schema.registry.url=http://schema-registry:8081 --topic cis_json_customers --from-beginning`
+
+### For NiFi, install it on your local machine and start it up
+<i>more install options here: https://nifi.apache.org/docs/nifi-docs/html/getting-started.html#downloading-and-installing-nifi</i>
+
+`brew install nifi`
+
+`bin/nifi.sh start`
+
+Import the nifi/audit-demo.xml template, start up the Controller Services for the Record Readers (JSON/Avro) and the DBConnectionPool Services.  Start the Processors and off you go.
+
 
 ### UIs
 
