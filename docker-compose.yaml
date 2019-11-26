@@ -9,7 +9,7 @@ volumes:
 services:
 
 ##########################################################
-# Kafka DB
+# Kafka
 ##########################################################
 
   zookeeper:
@@ -164,6 +164,7 @@ services:
     command: start --logtostderr=WARNING --insecure --join=roach-0 --listen-addr=roach-1:26257 --advertise-addr=roach-1:26257
     volumes:
       - certs-roach-1:/certs
+      - ${PWD}/sql:/cockroach/sql
     depends_on:
       - roach-cert
       - roach-0
@@ -175,6 +176,8 @@ services:
     command: start --logtostderr=WARNING --insecure --join=roach-0 --listen-addr=roach-2:26257 --advertise-addr=roach-2:26257
     volumes:
       - certs-roach-2:/certs
+      - ${PWD}/sql:/cockroach/sql
     depends_on:
       - roach-cert
       - roach-0
+      - roach-1
