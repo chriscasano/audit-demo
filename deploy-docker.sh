@@ -25,7 +25,7 @@ echo -e "*******************************"
 echo -e "Running Bank Demo"
 echo -e "*******************************"
 docker-compose exec -T roach-0 ./cockroach workload init bank "postgresql://roach-0:26257/bank?sslmode=disable"
-docker-compose exec -T roach-0 ./cockroach sql --insecure --host roach-0 --echo-sql < sql/bank-docker.sql
+docker-compose exec -T roach-0 ./cockroach sql --insecure --host roach-0 --echo-sql < sql/bank-docker_KEY.sql
 docker-compose exec -T roach-0 ./cockroach workload run bank --duration 10s "postgresql://roach-0:26257/bank?sslmode=disable"
 
 # Output IPs

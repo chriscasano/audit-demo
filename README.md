@@ -12,25 +12,64 @@ This demo shows how to create an audit table in CockroachDB using change data ca
 
 Be sure to update your Cockroach Organization and License in sql/bank.sql file since this demo uses CHANGEFEED which is under the enterprise license
 
+`SET CLUSTER SETTING cluster.organization = '';`<br>
+`SET CLUSTER SETTING enterprise.license = '';`
+
 #### Bring up the environment
 
 `docker-compose up --build`
 
-#### UIs
+Wait for the NiFi to come up before going to the next step.  You can also check all of the containers are running by running `docker-compose ps`
 
-Apache Nifi: http://localhost:9095/nifi/
-
-Cockroach Admin: http://localhost:8090
-
-Kafka Control Center: http://localhost:9021/clusters
-
-#### Run the demo
-
-This script will deploy a Nifi template the grabs the bank data from the Kafka queue, organizes it and then puts into the audit table.  All you need to do is start up the Controller Services for the Record Readers (JSON/Avro) and the DBConnectionPool Services.  Start the Processors and off you go.
+The script below will deploy a Nifi template the grabs the bank data from the Kafka queue, organizes it and then puts into the audit table.  All you need to do is start up the Controller Services for the Record Readers (JSON/Avro) and the DBConnectionPool Services.  Start the Processors and off you go.
 
 `deploy-docker.sh`
 
-You can demonstrate how the data flows from the bank table --> Kafka --> Nifi --> audit table
+#### UIs
+
+- Apache Nifi: http://localhost:9095/nifi/
+- Cockroach Admin: http://localhost:8090
+- Kafka Control Center: http://localhost:9021/clusters
+
+
+#### CLI
+
+- SQL (local crdb): `cockroach sql --insecure --host localhost --port 5432 --database cis`
+- SQL (none): `docker exec -it roach-0 /cockroach/cockroach.sh sql --insecure --host haproxy --port 5432 --database cis`
+
+
+## 2) Roach Prod
+
+### Before you run anything...
+
+Be sure to update your Cockroach Organization and License in sql/bank.sql file since this demo uses CHANGEFEED which is under the enterprise license.
+
+`SET CLUSTER SETTING cluster.organization = '';`<br>
+`SET CLUSTER SETTING enterprise.license = '';`
+
+### Run it
+The deployment is very straightforward.  You can run the deploy-roachprod.sh script which will spin up a 3 node Cockroach cluster, 1 workload node, 1 Kafka node and 1 NiFi node
+
+`deploy-roachprod.sh`
+
+The script will ask you to update the following items in the deployed NiFi flow:
+- The Kafka broker in the ConsumeKafka_2 Processor
+- The Database ip:port for the DBConnectionPool
+- Starting all of the Controller Services in the flow.
+
+#### UI
+
+- Apache Nifi: http://`roachprod ip $CLUSTER:6 -external`:8080/nifi/
+- Cockroach Admin: http://`roachprod ip $CLUSTER:1 -external`:26258
+- Kafka Control Center: http://`roachprod ip $CLUSTER:5 -external`:9021/clusters
+
+#### CLI
+
+- SQL: `roachprod ssh $CLUSTER:1`
+
+## Run the demo
+
+You can demonstrate how the data flows from the Bank table --> Kafka --> Nifi --> Audit table
 
 ![Bank Demo](/images/Bank_Demo.png)
 
@@ -53,49 +92,8 @@ You can demonstrate how the data flows from the bank table --> Kafka --> Nifi --
 ![Audit Table](/images/Audit_Table.png)
 
 
-#### CLI
-
-SQL (local crdb): cockroach sql --insecure --host localhost --port 5432 --database cis
-
-SQL (no local crdb): docker exec -it roach-0 /cockroach/cockroach.sh sql --insecure --host haproxy --port 5432 --database cis
-
-
-## 2) Roach Prod (In Dev)
-
-### Before you run anything...
-
-Be sure to update your Cockroach Organization and License in sql/bank.sql file since this demo uses CHANGEFEED which is under the enterprise license
-
-### Run it
-The deployment is very straightforward.  You can run the deploy,sh which will spin up a 3 node Cockroach cluster, a 1 Kafka node, 1 NiFi node and a Cockroach workload node.
-
-`deploy.sh`
-
-Go to the NiFi UI which is the last line output in deploy.sh.  http://<external-ip>:8080/nifi
-Deploy the 'audit-demo' template which is already pre-loaded in the NiFi template library
-Change the ConsumeKafka_2 processor.
-
-The JDBC connection URL needs to be updated as well
-
-Database driver location needs to be updated too
-
-Make sure to update Kafka Consumer broker in Nifi
-
 ### If desired, test you can test Kafka consumption
 
 `docker-compose exec -T connect /usr/bin/kafka-console-consumer --bootstrap-server broker:29092 --property schema.registry.url=http://schema-registry:8081 --topic bank_json_bank --from-beginning`
 
 `roachprod run $KAFKA "/usr/local/confluent/bin/kafka-console-consumer --bootstrap-server localhost:9092 --property schema.registry.url=http://localhost:8081 --topic bank_json_bank --from-beginning"`
-
-
-# The Demo
-
-<u>Mapping</u>
-
-tbl <-- kafka.topic (attr)
-pk  <-- kafka.key (attr)
-attr <-- after.<name> (payload)
-ts <-- updated (payload)
-new <-- after.<name>.value (payload)
-prev
-action <--  ${after:isEmpty():ifElse('Delete','Insert/Update')}

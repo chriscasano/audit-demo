@@ -23,4 +23,4 @@ create table audit
 
 use bank;
 
-CREATE CHANGEFEED FOR TABLE bank INTO 'kafka://`roachprod ip ${KAFKA} --external`:9092?topic_prefix=bank_json_' WITH updated, key_in_value, format = json, confluent_schema_registry = 'http://`roachprod ip ${KAFKA} --external`:8081';
+--CREATE CHANGEFEED FOR TABLE bank INTO 'kafka://`roachprod ip ${KAFKA} --external`:9092?topic_prefix=bank_json_' WITH updated, key_in_value, format = json, confluent_schema_registry = 'http://`roachprod ip ${KAFKA} --external`:8081';
