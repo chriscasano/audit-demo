@@ -67,7 +67,7 @@ conserv=$(curl http://`roachprod ip $NIFI --external`:9095/nifi-api/flow/process
 
 echo -e "***************************************************"
 echo -e "***************************************************"
-echo -e "NiFi UI: http://`roachprod ip ${NIFI} --external`:8080/nifi""
+echo -e "NiFi UI: http://`roachprod ip ${NIFI} --external`:8080/nifi"
 read -p "Please update the NiFi ConsumeKafka_2 Processor with Kafka Broker property to:  `roachprod ip $KAFKA`:9092
 Press Enter When Complete" kb
 
