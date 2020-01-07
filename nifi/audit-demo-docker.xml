@@ -1,75 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <template encoding-version="1.2">
     <description></description>
-    <groupId>c851f95d-016e-1000-42e9-64e65dd07f90</groupId>
+    <groupId>7de357d0-016f-1000-8288-4366766df108</groupId>
     <name>audit-demo-docker</name>
     <snippet>
         <connections>
-            <id>0021d28c-f175-3f7f-0000-000000000000</id>
-            <parentGroupId>4cc8e40e-d473-39fb-0000-000000000000</parentGroupId>
+            <id>24310f16-aab7-3aad-0000-000000000000</id>
+            <parentGroupId>00b2df8c-ef99-3949-0000-000000000000</parentGroupId>
             <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
             <backPressureObjectThreshold>10000</backPressureObjectThreshold>
             <destination>
-                <groupId>4cc8e40e-d473-39fb-0000-000000000000</groupId>
-                <id>f1b222e6-cc0c-3693-0000-000000000000</id>
-                <type>OUTPUT_PORT</type>
-            </destination>
-            <flowFileExpiration>0 sec</flowFileExpiration>
-            <labelIndex>1</labelIndex>
-            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
-            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
-            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
-            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
-            <name></name>
-            <selectedRelationships>failure</selectedRelationships>
-            <source>
-                <groupId>4cc8e40e-d473-39fb-0000-000000000000</groupId>
-                <id>a9b8747f-9724-3faa-0000-000000000000</id>
-                <type>PROCESSOR</type>
-            </source>
-            <zIndex>0</zIndex>
-        </connections>
-        <connections>
-            <id>2fd697bd-3ea2-35f6-0000-000000000000</id>
-            <parentGroupId>4cc8e40e-d473-39fb-0000-000000000000</parentGroupId>
-            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
-            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
-            <bends>
-                <x>1001.6579851310412</x>
-                <y>222.2296392193673</y>
-            </bends>
-            <bends>
-                <x>1001.6579851310412</x>
-                <y>272.2296392193673</y>
-            </bends>
-            <destination>
-                <groupId>4cc8e40e-d473-39fb-0000-000000000000</groupId>
-                <id>a9b8747f-9724-3faa-0000-000000000000</id>
-                <type>PROCESSOR</type>
-            </destination>
-            <flowFileExpiration>0 sec</flowFileExpiration>
-            <labelIndex>1</labelIndex>
-            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
-            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
-            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
-            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
-            <name></name>
-            <selectedRelationships>retry</selectedRelationships>
-            <source>
-                <groupId>4cc8e40e-d473-39fb-0000-000000000000</groupId>
-                <id>a9b8747f-9724-3faa-0000-000000000000</id>
-                <type>PROCESSOR</type>
-            </source>
-            <zIndex>0</zIndex>
-        </connections>
-        <connections>
-            <id>91569bbc-39a4-331b-0000-000000000000</id>
-            <parentGroupId>4cc8e40e-d473-39fb-0000-000000000000</parentGroupId>
-            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
-            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
-            <destination>
-                <groupId>4cc8e40e-d473-39fb-0000-000000000000</groupId>
-                <id>2adebd75-e6d8-337e-0000-000000000000</id>
+                <groupId>00b2df8c-ef99-3949-0000-000000000000</groupId>
+                <id>3131c99d-a00b-323f-0000-000000000000</id>
                 <type>PROCESSOR</type>
             </destination>
             <flowFileExpiration>0 sec</flowFileExpiration>
@@ -81,20 +23,20 @@
             <name></name>
             <selectedRelationships>matched</selectedRelationships>
             <source>
-                <groupId>4cc8e40e-d473-39fb-0000-000000000000</groupId>
-                <id>8e77d426-4fb5-35a9-0000-000000000000</id>
+                <groupId>00b2df8c-ef99-3949-0000-000000000000</groupId>
+                <id>8c5eef9f-353e-3643-0000-000000000000</id>
                 <type>PROCESSOR</type>
             </source>
             <zIndex>0</zIndex>
         </connections>
         <connections>
-            <id>9a5fb60e-73d0-34a2-0000-000000000000</id>
-            <parentGroupId>4cc8e40e-d473-39fb-0000-000000000000</parentGroupId>
+            <id>4e06a51f-4b91-3c1e-0000-000000000000</id>
+            <parentGroupId>00b2df8c-ef99-3949-0000-000000000000</parentGroupId>
             <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
             <backPressureObjectThreshold>10000</backPressureObjectThreshold>
             <destination>
-                <groupId>4cc8e40e-d473-39fb-0000-000000000000</groupId>
-                <id>a9b8747f-9724-3faa-0000-000000000000</id>
+                <groupId>00b2df8c-ef99-3949-0000-000000000000</groupId>
+                <id>684c7da0-f239-345a-0000-000000000000</id>
                 <type>PROCESSOR</type>
             </destination>
             <flowFileExpiration>0 sec</flowFileExpiration>
@@ -106,20 +48,78 @@
             <name></name>
             <selectedRelationships>success</selectedRelationships>
             <source>
-                <groupId>4cc8e40e-d473-39fb-0000-000000000000</groupId>
-                <id>4bfb2677-5469-377e-0000-000000000000</id>
+                <groupId>00b2df8c-ef99-3949-0000-000000000000</groupId>
+                <id>c09a124f-282b-3d05-0000-000000000000</id>
                 <type>PROCESSOR</type>
             </source>
             <zIndex>0</zIndex>
         </connections>
         <connections>
-            <id>9abc9de6-1160-33bd-0000-000000000000</id>
-            <parentGroupId>4cc8e40e-d473-39fb-0000-000000000000</parentGroupId>
+            <id>9c8c154f-9809-3bc7-0000-000000000000</id>
+            <parentGroupId>00b2df8c-ef99-3949-0000-000000000000</parentGroupId>
             <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
             <backPressureObjectThreshold>10000</backPressureObjectThreshold>
             <destination>
-                <groupId>4cc8e40e-d473-39fb-0000-000000000000</groupId>
-                <id>4bfb2677-5469-377e-0000-000000000000</id>
+                <groupId>00b2df8c-ef99-3949-0000-000000000000</groupId>
+                <id>0788abfb-db29-3eec-0000-000000000000</id>
+                <type>OUTPUT_PORT</type>
+            </destination>
+            <flowFileExpiration>0 sec</flowFileExpiration>
+            <labelIndex>1</labelIndex>
+            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+            <name></name>
+            <selectedRelationships>failure</selectedRelationships>
+            <source>
+                <groupId>00b2df8c-ef99-3949-0000-000000000000</groupId>
+                <id>079d1561-d976-34f6-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </source>
+            <zIndex>0</zIndex>
+        </connections>
+        <connections>
+            <id>bc48fa6c-fac4-306e-0000-000000000000</id>
+            <parentGroupId>00b2df8c-ef99-3949-0000-000000000000</parentGroupId>
+            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+            <bends>
+                <x>1001.6579851310412</x>
+                <y>222.2296392193673</y>
+            </bends>
+            <bends>
+                <x>1001.6579851310412</x>
+                <y>272.2296392193673</y>
+            </bends>
+            <destination>
+                <groupId>00b2df8c-ef99-3949-0000-000000000000</groupId>
+                <id>079d1561-d976-34f6-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </destination>
+            <flowFileExpiration>0 sec</flowFileExpiration>
+            <labelIndex>1</labelIndex>
+            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+            <name></name>
+            <selectedRelationships>retry</selectedRelationships>
+            <source>
+                <groupId>00b2df8c-ef99-3949-0000-000000000000</groupId>
+                <id>079d1561-d976-34f6-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </source>
+            <zIndex>0</zIndex>
+        </connections>
+        <connections>
+            <id>cf2cd6e1-eab7-35bf-0000-000000000000</id>
+            <parentGroupId>00b2df8c-ef99-3949-0000-000000000000</parentGroupId>
+            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+            <destination>
+                <groupId>00b2df8c-ef99-3949-0000-000000000000</groupId>
+                <id>8c5eef9f-353e-3643-0000-000000000000</id>
                 <type>PROCESSOR</type>
             </destination>
             <flowFileExpiration>0 sec</flowFileExpiration>
@@ -131,20 +131,20 @@
             <name></name>
             <selectedRelationships>success</selectedRelationships>
             <source>
-                <groupId>4cc8e40e-d473-39fb-0000-000000000000</groupId>
-                <id>cd38a4eb-0c24-39c1-0000-000000000000</id>
+                <groupId>00b2df8c-ef99-3949-0000-000000000000</groupId>
+                <id>707f4f3d-93ac-3ad1-0000-000000000000</id>
                 <type>PROCESSOR</type>
             </source>
             <zIndex>0</zIndex>
         </connections>
         <connections>
-            <id>bba42dbb-a695-3745-0000-000000000000</id>
-            <parentGroupId>4cc8e40e-d473-39fb-0000-000000000000</parentGroupId>
+            <id>e3a2cfef-1b0d-3111-0000-000000000000</id>
+            <parentGroupId>00b2df8c-ef99-3949-0000-000000000000</parentGroupId>
             <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
             <backPressureObjectThreshold>10000</backPressureObjectThreshold>
             <destination>
-                <groupId>4cc8e40e-d473-39fb-0000-000000000000</groupId>
-                <id>8e77d426-4fb5-35a9-0000-000000000000</id>
+                <groupId>00b2df8c-ef99-3949-0000-000000000000</groupId>
+                <id>079d1561-d976-34f6-0000-000000000000</id>
                 <type>PROCESSOR</type>
             </destination>
             <flowFileExpiration>0 sec</flowFileExpiration>
@@ -156,20 +156,20 @@
             <name></name>
             <selectedRelationships>success</selectedRelationships>
             <source>
-                <groupId>4cc8e40e-d473-39fb-0000-000000000000</groupId>
-                <id>03a851d5-6ff4-32e1-0000-000000000000</id>
+                <groupId>00b2df8c-ef99-3949-0000-000000000000</groupId>
+                <id>684c7da0-f239-345a-0000-000000000000</id>
                 <type>PROCESSOR</type>
             </source>
             <zIndex>0</zIndex>
         </connections>
         <connections>
-            <id>ce724805-2641-3193-0000-000000000000</id>
-            <parentGroupId>4cc8e40e-d473-39fb-0000-000000000000</parentGroupId>
+            <id>e7afb652-f96b-35ee-0000-000000000000</id>
+            <parentGroupId>00b2df8c-ef99-3949-0000-000000000000</parentGroupId>
             <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
             <backPressureObjectThreshold>10000</backPressureObjectThreshold>
             <destination>
-                <groupId>4cc8e40e-d473-39fb-0000-000000000000</groupId>
-                <id>cd38a4eb-0c24-39c1-0000-000000000000</id>
+                <groupId>00b2df8c-ef99-3949-0000-000000000000</groupId>
+                <id>c09a124f-282b-3d05-0000-000000000000</id>
                 <type>PROCESSOR</type>
             </destination>
             <flowFileExpiration>0 sec</flowFileExpiration>
@@ -181,141 +181,15 @@
             <name></name>
             <selectedRelationships>success</selectedRelationships>
             <source>
-                <groupId>4cc8e40e-d473-39fb-0000-000000000000</groupId>
-                <id>2adebd75-e6d8-337e-0000-000000000000</id>
+                <groupId>00b2df8c-ef99-3949-0000-000000000000</groupId>
+                <id>3131c99d-a00b-323f-0000-000000000000</id>
                 <type>PROCESSOR</type>
             </source>
             <zIndex>0</zIndex>
         </connections>
         <controllerServices>
-            <id>0758c916-e03f-3209-0000-000000000000</id>
-            <parentGroupId>4cc8e40e-d473-39fb-0000-000000000000</parentGroupId>
-            <bundle>
-                <artifact>nifi-record-serialization-services-nar</artifact>
-                <group>org.apache.nifi</group>
-                <version>1.9.2</version>
-            </bundle>
-            <comments></comments>
-            <descriptors>
-                <entry>
-                    <key>Schema Write Strategy</key>
-                    <value>
-                        <name>Schema Write Strategy</name>
-                    </value>
-                </entry>
-                <entry>
-                    <key>schema-cache</key>
-                    <value>
-                        <identifiesControllerService>org.apache.nifi.serialization.RecordSchemaCacheService</identifiesControllerService>
-                        <name>schema-cache</name>
-                    </value>
-                </entry>
-                <entry>
-                    <key>schema-access-strategy</key>
-                    <value>
-                        <name>schema-access-strategy</name>
-                    </value>
-                </entry>
-                <entry>
-                    <key>schema-registry</key>
-                    <value>
-                        <identifiesControllerService>org.apache.nifi.schemaregistry.services.SchemaRegistry</identifiesControllerService>
-                        <name>schema-registry</name>
-                    </value>
-                </entry>
-                <entry>
-                    <key>schema-name</key>
-                    <value>
-                        <name>schema-name</name>
-                    </value>
-                </entry>
-                <entry>
-                    <key>schema-version</key>
-                    <value>
-                        <name>schema-version</name>
-                    </value>
-                </entry>
-                <entry>
-                    <key>schema-branch</key>
-                    <value>
-                        <name>schema-branch</name>
-                    </value>
-                </entry>
-                <entry>
-                    <key>schema-text</key>
-                    <value>
-                        <name>schema-text</name>
-                    </value>
-                </entry>
-                <entry>
-                    <key>compression-format</key>
-                    <value>
-                        <name>compression-format</name>
-                    </value>
-                </entry>
-                <entry>
-                    <key>cache-size</key>
-                    <value>
-                        <name>cache-size</name>
-                    </value>
-                </entry>
-                <entry>
-                    <key>encoder-pool-size</key>
-                    <value>
-                        <name>encoder-pool-size</name>
-                    </value>
-                </entry>
-            </descriptors>
-            <name>AvroRecordSetWriter</name>
-            <persistsState>false</persistsState>
-            <properties>
-                <entry>
-                    <key>Schema Write Strategy</key>
-                    <value>avro-embedded</value>
-                </entry>
-                <entry>
-                    <key>schema-cache</key>
-                </entry>
-                <entry>
-                    <key>schema-access-strategy</key>
-                    <value>inherit-record-schema</value>
-                </entry>
-                <entry>
-                    <key>schema-registry</key>
-                </entry>
-                <entry>
-                    <key>schema-name</key>
-                    <value>${schema.name}</value>
-                </entry>
-                <entry>
-                    <key>schema-version</key>
-                </entry>
-                <entry>
-                    <key>schema-branch</key>
-                </entry>
-                <entry>
-                    <key>schema-text</key>
-                    <value>${avro.schema}</value>
-                </entry>
-                <entry>
-                    <key>compression-format</key>
-                    <value>NONE</value>
-                </entry>
-                <entry>
-                    <key>cache-size</key>
-                    <value>1000</value>
-                </entry>
-                <entry>
-                    <key>encoder-pool-size</key>
-                    <value>32</value>
-                </entry>
-            </properties>
-            <state>ENABLED</state>
-            <type>org.apache.nifi.avro.AvroRecordSetWriter</type>
-        </controllerServices>
-        <controllerServices>
-            <id>e3eb5250-61ee-34e1-0000-000000000000</id>
-            <parentGroupId>4cc8e40e-d473-39fb-0000-000000000000</parentGroupId>
+            <id>4cfa9eaa-ef66-3ccf-0000-000000000000</id>
+            <parentGroupId>00b2df8c-ef99-3949-0000-000000000000</parentGroupId>
             <bundle>
                 <artifact>nifi-record-serialization-services-nar</artifact>
                 <group>org.apache.nifi</group>
@@ -487,8 +361,8 @@
             <type>org.apache.nifi.json.JsonPathReader</type>
         </controllerServices>
         <controllerServices>
-            <id>f82b0997-c82d-38d0-0000-000000000000</id>
-            <parentGroupId>4cc8e40e-d473-39fb-0000-000000000000</parentGroupId>
+            <id>5a4b991b-04fc-3773-0000-000000000000</id>
+            <parentGroupId>00b2df8c-ef99-3949-0000-000000000000</parentGroupId>
             <bundle>
                 <artifact>nifi-dbcp-service-nar</artifact>
                 <group>org.apache.nifi</group>
@@ -653,8 +527,134 @@
             <type>org.apache.nifi.dbcp.DBCPConnectionPool</type>
         </controllerServices>
         <controllerServices>
-            <id>fba6d866-db6f-3eed-0000-000000000000</id>
-            <parentGroupId>4cc8e40e-d473-39fb-0000-000000000000</parentGroupId>
+            <id>955b6065-b25b-3a91-0000-000000000000</id>
+            <parentGroupId>00b2df8c-ef99-3949-0000-000000000000</parentGroupId>
+            <bundle>
+                <artifact>nifi-record-serialization-services-nar</artifact>
+                <group>org.apache.nifi</group>
+                <version>1.9.2</version>
+            </bundle>
+            <comments></comments>
+            <descriptors>
+                <entry>
+                    <key>Schema Write Strategy</key>
+                    <value>
+                        <name>Schema Write Strategy</name>
+                    </value>
+                </entry>
+                <entry>
+                    <key>schema-cache</key>
+                    <value>
+                        <identifiesControllerService>org.apache.nifi.serialization.RecordSchemaCacheService</identifiesControllerService>
+                        <name>schema-cache</name>
+                    </value>
+                </entry>
+                <entry>
+                    <key>schema-access-strategy</key>
+                    <value>
+                        <name>schema-access-strategy</name>
+                    </value>
+                </entry>
+                <entry>
+                    <key>schema-registry</key>
+                    <value>
+                        <identifiesControllerService>org.apache.nifi.schemaregistry.services.SchemaRegistry</identifiesControllerService>
+                        <name>schema-registry</name>
+                    </value>
+                </entry>
+                <entry>
+                    <key>schema-name</key>
+                    <value>
+                        <name>schema-name</name>
+                    </value>
+                </entry>
+                <entry>
+                    <key>schema-version</key>
+                    <value>
+                        <name>schema-version</name>
+                    </value>
+                </entry>
+                <entry>
+                    <key>schema-branch</key>
+                    <value>
+                        <name>schema-branch</name>
+                    </value>
+                </entry>
+                <entry>
+                    <key>schema-text</key>
+                    <value>
+                        <name>schema-text</name>
+                    </value>
+                </entry>
+                <entry>
+                    <key>compression-format</key>
+                    <value>
+                        <name>compression-format</name>
+                    </value>
+                </entry>
+                <entry>
+                    <key>cache-size</key>
+                    <value>
+                        <name>cache-size</name>
+                    </value>
+                </entry>
+                <entry>
+                    <key>encoder-pool-size</key>
+                    <value>
+                        <name>encoder-pool-size</name>
+                    </value>
+                </entry>
+            </descriptors>
+            <name>AvroRecordSetWriter</name>
+            <persistsState>false</persistsState>
+            <properties>
+                <entry>
+                    <key>Schema Write Strategy</key>
+                    <value>avro-embedded</value>
+                </entry>
+                <entry>
+                    <key>schema-cache</key>
+                </entry>
+                <entry>
+                    <key>schema-access-strategy</key>
+                    <value>inherit-record-schema</value>
+                </entry>
+                <entry>
+                    <key>schema-registry</key>
+                </entry>
+                <entry>
+                    <key>schema-name</key>
+                    <value>${schema.name}</value>
+                </entry>
+                <entry>
+                    <key>schema-version</key>
+                </entry>
+                <entry>
+                    <key>schema-branch</key>
+                </entry>
+                <entry>
+                    <key>schema-text</key>
+                    <value>${avro.schema}</value>
+                </entry>
+                <entry>
+                    <key>compression-format</key>
+                    <value>NONE</value>
+                </entry>
+                <entry>
+                    <key>cache-size</key>
+                    <value>1000</value>
+                </entry>
+                <entry>
+                    <key>encoder-pool-size</key>
+                    <value>32</value>
+                </entry>
+            </properties>
+            <state>ENABLED</state>
+            <type>org.apache.nifi.avro.AvroRecordSetWriter</type>
+        </controllerServices>
+        <controllerServices>
+            <id>bfd9e6c2-ee37-39ef-0000-000000000000</id>
+            <parentGroupId>00b2df8c-ef99-3949-0000-000000000000</parentGroupId>
             <bundle>
                 <artifact>nifi-record-serialization-services-nar</artifact>
                 <group>org.apache.nifi</group>
@@ -739,8 +739,8 @@
             <type>org.apache.nifi.avro.AvroReader</type>
         </controllerServices>
         <labels>
-            <id>1ec65a9e-2f06-3d2d-0000-000000000000</id>
-            <parentGroupId>4cc8e40e-d473-39fb-0000-000000000000</parentGroupId>
+            <id>2f5bba4b-8a80-3b7a-0000-000000000000</id>
+            <parentGroupId>00b2df8c-ef99-3949-0000-000000000000</parentGroupId>
             <position>
                 <x>1031.6666666666665</x>
                 <y>414.00001017252606</y>
@@ -756,8 +756,8 @@
             <width>308.3333282470703</width>
         </labels>
         <outputPorts>
-            <id>f1b222e6-cc0c-3693-0000-000000000000</id>
-            <parentGroupId>4cc8e40e-d473-39fb-0000-000000000000</parentGroupId>
+            <id>0788abfb-db29-3eec-0000-000000000000</id>
+            <parentGroupId>00b2df8c-ef99-3949-0000-000000000000</parentGroupId>
             <position>
                 <x>584.221923828125</x>
                 <y>46.27653884887695</y>
@@ -770,8 +770,453 @@
             <type>OUTPUT_PORT</type>
         </outputPorts>
         <processors>
-            <id>03a851d5-6ff4-32e1-0000-000000000000</id>
-            <parentGroupId>4cc8e40e-d473-39fb-0000-000000000000</parentGroupId>
+            <id>079d1561-d976-34f6-0000-000000000000</id>
+            <parentGroupId>00b2df8c-ef99-3949-0000-000000000000</parentGroupId>
+            <position>
+                <x>538.6579851310412</x>
+                <y>182.2296392193673</y>
+            </position>
+            <bundle>
+                <artifact>nifi-standard-nar</artifact>
+                <group>org.apache.nifi</group>
+                <version>1.9.2</version>
+            </bundle>
+            <config>
+                <bulletinLevel>WARN</bulletinLevel>
+                <comments></comments>
+                <concurrentlySchedulableTaskCount>5</concurrentlySchedulableTaskCount>
+                <descriptors>
+                    <entry>
+                        <key>put-db-record-record-reader</key>
+                        <value>
+                            <identifiesControllerService>org.apache.nifi.serialization.RecordReaderFactory</identifiesControllerService>
+                            <name>put-db-record-record-reader</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>put-db-record-statement-type</key>
+                        <value>
+                            <name>put-db-record-statement-type</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>put-db-record-dcbp-service</key>
+                        <value>
+                            <identifiesControllerService>org.apache.nifi.dbcp.DBCPService</identifiesControllerService>
+                            <name>put-db-record-dcbp-service</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>put-db-record-catalog-name</key>
+                        <value>
+                            <name>put-db-record-catalog-name</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>put-db-record-schema-name</key>
+                        <value>
+                            <name>put-db-record-schema-name</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>put-db-record-table-name</key>
+                        <value>
+                            <name>put-db-record-table-name</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>put-db-record-translate-field-names</key>
+                        <value>
+                            <name>put-db-record-translate-field-names</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>put-db-record-unmatched-field-behavior</key>
+                        <value>
+                            <name>put-db-record-unmatched-field-behavior</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>put-db-record-unmatched-column-behavior</key>
+                        <value>
+                            <name>put-db-record-unmatched-column-behavior</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>put-db-record-update-keys</key>
+                        <value>
+                            <name>put-db-record-update-keys</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>put-db-record-field-containing-sql</key>
+                        <value>
+                            <name>put-db-record-field-containing-sql</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>put-db-record-quoted-identifiers</key>
+                        <value>
+                            <name>put-db-record-quoted-identifiers</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>put-db-record-quoted-table-identifiers</key>
+                        <value>
+                            <name>put-db-record-quoted-table-identifiers</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>put-db-record-query-timeout</key>
+                        <value>
+                            <name>put-db-record-query-timeout</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>rollback-on-failure</key>
+                        <value>
+                            <name>rollback-on-failure</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>table-schema-cache-size</key>
+                        <value>
+                            <name>table-schema-cache-size</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>put-db-record-max-batch-size</key>
+                        <value>
+                            <name>put-db-record-max-batch-size</name>
+                        </value>
+                    </entry>
+                </descriptors>
+                <executionNode>ALL</executionNode>
+                <lossTolerant>false</lossTolerant>
+                <penaltyDuration>30 sec</penaltyDuration>
+                <properties>
+                    <entry>
+                        <key>put-db-record-record-reader</key>
+                        <value>bfd9e6c2-ee37-39ef-0000-000000000000</value>
+                    </entry>
+                    <entry>
+                        <key>put-db-record-statement-type</key>
+                        <value>Use statement.type Attribute</value>
+                    </entry>
+                    <entry>
+                        <key>put-db-record-dcbp-service</key>
+                        <value>5a4b991b-04fc-3773-0000-000000000000</value>
+                    </entry>
+                    <entry>
+                        <key>put-db-record-catalog-name</key>
+                        <value>cis</value>
+                    </entry>
+                    <entry>
+                        <key>put-db-record-schema-name</key>
+                    </entry>
+                    <entry>
+                        <key>put-db-record-table-name</key>
+                        <value>audit</value>
+                    </entry>
+                    <entry>
+                        <key>put-db-record-translate-field-names</key>
+                        <value>true</value>
+                    </entry>
+                    <entry>
+                        <key>put-db-record-unmatched-field-behavior</key>
+                        <value>Ignore Unmatched Fields</value>
+                    </entry>
+                    <entry>
+                        <key>put-db-record-unmatched-column-behavior</key>
+                        <value>Ignore Unmatched Columns</value>
+                    </entry>
+                    <entry>
+                        <key>put-db-record-update-keys</key>
+                    </entry>
+                    <entry>
+                        <key>put-db-record-field-containing-sql</key>
+                    </entry>
+                    <entry>
+                        <key>put-db-record-quoted-identifiers</key>
+                        <value>false</value>
+                    </entry>
+                    <entry>
+                        <key>put-db-record-quoted-table-identifiers</key>
+                        <value>false</value>
+                    </entry>
+                    <entry>
+                        <key>put-db-record-query-timeout</key>
+                        <value>0 seconds</value>
+                    </entry>
+                    <entry>
+                        <key>rollback-on-failure</key>
+                        <value>false</value>
+                    </entry>
+                    <entry>
+                        <key>table-schema-cache-size</key>
+                        <value>100</value>
+                    </entry>
+                    <entry>
+                        <key>put-db-record-max-batch-size</key>
+                        <value>1000</value>
+                    </entry>
+                </properties>
+                <runDurationMillis>0</runDurationMillis>
+                <schedulingPeriod>0 sec</schedulingPeriod>
+                <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                <yieldDuration>1 sec</yieldDuration>
+            </config>
+            <executionNodeRestricted>false</executionNodeRestricted>
+            <name>PutDatabaseRecord</name>
+            <relationships>
+                <autoTerminate>false</autoTerminate>
+                <name>failure</name>
+            </relationships>
+            <relationships>
+                <autoTerminate>false</autoTerminate>
+                <name>retry</name>
+            </relationships>
+            <relationships>
+                <autoTerminate>true</autoTerminate>
+                <name>success</name>
+            </relationships>
+            <state>STOPPED</state>
+            <style/>
+            <type>org.apache.nifi.processors.standard.PutDatabaseRecord</type>
+        </processors>
+        <processors>
+            <id>3131c99d-a00b-323f-0000-000000000000</id>
+            <parentGroupId>00b2df8c-ef99-3949-0000-000000000000</parentGroupId>
+            <position>
+                <x>0.0</x>
+                <y>372.0</y>
+            </position>
+            <bundle>
+                <artifact>nifi-update-attribute-nar</artifact>
+                <group>org.apache.nifi</group>
+                <version>1.9.2</version>
+            </bundle>
+            <config>
+                <bulletinLevel>WARN</bulletinLevel>
+                <comments></comments>
+                <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                <descriptors>
+                    <entry>
+                        <key>Delete Attributes Expression</key>
+                        <value>
+                            <name>Delete Attributes Expression</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Store State</key>
+                        <value>
+                            <name>Store State</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Stateful Variables Initial Value</key>
+                        <value>
+                            <name>Stateful Variables Initial Value</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>canonical-value-lookup-cache-size</key>
+                        <value>
+                            <name>canonical-value-lookup-cache-size</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>action</key>
+                        <value>
+                            <name>action</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>new</key>
+                        <value>
+                            <name>new</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>pk</key>
+                        <value>
+                            <name>pk</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>statement.type</key>
+                        <value>
+                            <name>statement.type</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>tbl</key>
+                        <value>
+                            <name>tbl</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>ts</key>
+                        <value>
+                            <name>ts</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>ts1</key>
+                        <value>
+                            <name>ts1</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>ts2</key>
+                        <value>
+                            <name>ts2</name>
+                        </value>
+                    </entry>
+                </descriptors>
+                <executionNode>ALL</executionNode>
+                <lossTolerant>false</lossTolerant>
+                <penaltyDuration>30 sec</penaltyDuration>
+                <properties>
+                    <entry>
+                        <key>Delete Attributes Expression</key>
+                    </entry>
+                    <entry>
+                        <key>Store State</key>
+                        <value>Do not store state</value>
+                    </entry>
+                    <entry>
+                        <key>Stateful Variables Initial Value</key>
+                    </entry>
+                    <entry>
+                        <key>canonical-value-lookup-cache-size</key>
+                        <value>100</value>
+                    </entry>
+                    <entry>
+                        <key>action</key>
+                        <value> ${action_key:isEmpty():ifElse('Delete','Insert/Update')}</value>
+                    </entry>
+                    <entry>
+                        <key>new</key>
+                        <value>${action_key}</value>
+                    </entry>
+                    <entry>
+                        <key>pk</key>
+                        <value>${kafka.key:replace('["',''):replace('"]','')}</value>
+                    </entry>
+                    <entry>
+                        <key>statement.type</key>
+                        <value>${action_key:isEmpty():ifElse("DELETE","INSERT")}</value>
+                    </entry>
+                    <entry>
+                        <key>tbl</key>
+                        <value>${kafka.topic:replace('cis_json_',''):replace('bank_json_','')}</value>
+                    </entry>
+                    <entry>
+                        <key>ts</key>
+                        <value>${updated}</value>
+                    </entry>
+                    <entry>
+                        <key>ts1</key>
+                        <value>${updated:substring(0,13):toNumber():format('yyyy-MM-dd HH:mm:ss.SSS')}</value>
+                    </entry>
+                    <entry>
+                        <key>ts2</key>
+                        <value>${now():format('yyyy-MM-dd HH:mm:ss.SSS')}</value>
+                    </entry>
+                </properties>
+                <runDurationMillis>0</runDurationMillis>
+                <schedulingPeriod>0 sec</schedulingPeriod>
+                <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                <yieldDuration>1 sec</yieldDuration>
+            </config>
+            <executionNodeRestricted>false</executionNodeRestricted>
+            <name>UpdateAttribute</name>
+            <relationships>
+                <autoTerminate>false</autoTerminate>
+                <name>success</name>
+            </relationships>
+            <state>STOPPED</state>
+            <style/>
+            <type>org.apache.nifi.processors.attributes.UpdateAttribute</type>
+        </processors>
+        <processors>
+            <id>684c7da0-f239-345a-0000-000000000000</id>
+            <parentGroupId>00b2df8c-ef99-3949-0000-000000000000</parentGroupId>
+            <position>
+                <x>534.398681640625</x>
+                <y>362.5107116699219</y>
+            </position>
+            <bundle>
+                <artifact>nifi-standard-nar</artifact>
+                <group>org.apache.nifi</group>
+                <version>1.9.2</version>
+            </bundle>
+            <config>
+                <bulletinLevel>WARN</bulletinLevel>
+                <comments></comments>
+                <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                <descriptors>
+                    <entry>
+                        <key>record-reader</key>
+                        <value>
+                            <identifiesControllerService>org.apache.nifi.serialization.RecordReaderFactory</identifiesControllerService>
+                            <name>record-reader</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>record-writer</key>
+                        <value>
+                            <identifiesControllerService>org.apache.nifi.serialization.RecordSetWriterFactory</identifiesControllerService>
+                            <name>record-writer</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>include-zero-record-flowfiles</key>
+                        <value>
+                            <name>include-zero-record-flowfiles</name>
+                        </value>
+                    </entry>
+                </descriptors>
+                <executionNode>ALL</executionNode>
+                <lossTolerant>false</lossTolerant>
+                <penaltyDuration>30 sec</penaltyDuration>
+                <properties>
+                    <entry>
+                        <key>record-reader</key>
+                        <value>4cfa9eaa-ef66-3ccf-0000-000000000000</value>
+                    </entry>
+                    <entry>
+                        <key>record-writer</key>
+                        <value>955b6065-b25b-3a91-0000-000000000000</value>
+                    </entry>
+                    <entry>
+                        <key>include-zero-record-flowfiles</key>
+                        <value>true</value>
+                    </entry>
+                </properties>
+                <runDurationMillis>0</runDurationMillis>
+                <schedulingPeriod>0 sec</schedulingPeriod>
+                <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                <yieldDuration>1 sec</yieldDuration>
+            </config>
+            <executionNodeRestricted>false</executionNodeRestricted>
+            <name>ConvertRecord</name>
+            <relationships>
+                <autoTerminate>true</autoTerminate>
+                <name>failure</name>
+            </relationships>
+            <relationships>
+                <autoTerminate>false</autoTerminate>
+                <name>success</name>
+            </relationships>
+            <state>STOPPED</state>
+            <style/>
+            <type>org.apache.nifi.processors.standard.ConvertRecord</type>
+        </processors>
+        <processors>
+            <id>707f4f3d-93ac-3ad1-0000-000000000000</id>
+            <parentGroupId>00b2df8c-ef99-3949-0000-000000000000</parentGroupId>
             <position>
                 <x>3.9407958984375</x>
                 <y>0.0</y>
@@ -988,233 +1433,13 @@
                 <autoTerminate>false</autoTerminate>
                 <name>success</name>
             </relationships>
-            <state>RUNNING</state>
+            <state>STOPPED</state>
             <style/>
             <type>org.apache.nifi.processors.kafka.pubsub.ConsumeKafka_2_0</type>
         </processors>
         <processors>
-            <id>2adebd75-e6d8-337e-0000-000000000000</id>
-            <parentGroupId>4cc8e40e-d473-39fb-0000-000000000000</parentGroupId>
-            <position>
-                <x>0.0</x>
-                <y>372.0</y>
-            </position>
-            <bundle>
-                <artifact>nifi-update-attribute-nar</artifact>
-                <group>org.apache.nifi</group>
-                <version>1.9.2</version>
-            </bundle>
-            <config>
-                <bulletinLevel>WARN</bulletinLevel>
-                <comments></comments>
-                <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
-                <descriptors>
-                    <entry>
-                        <key>Delete Attributes Expression</key>
-                        <value>
-                            <name>Delete Attributes Expression</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>Store State</key>
-                        <value>
-                            <name>Store State</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>Stateful Variables Initial Value</key>
-                        <value>
-                            <name>Stateful Variables Initial Value</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>canonical-value-lookup-cache-size</key>
-                        <value>
-                            <name>canonical-value-lookup-cache-size</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>action</key>
-                        <value>
-                            <name>action</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>new</key>
-                        <value>
-                            <name>new</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>pk</key>
-                        <value>
-                            <name>pk</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>tbl</key>
-                        <value>
-                            <name>tbl</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>ts</key>
-                        <value>
-                            <name>ts</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>ts1</key>
-                        <value>
-                            <name>ts1</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>ts2</key>
-                        <value>
-                            <name>ts2</name>
-                        </value>
-                    </entry>
-                </descriptors>
-                <executionNode>ALL</executionNode>
-                <lossTolerant>false</lossTolerant>
-                <penaltyDuration>30 sec</penaltyDuration>
-                <properties>
-                    <entry>
-                        <key>Delete Attributes Expression</key>
-                    </entry>
-                    <entry>
-                        <key>Store State</key>
-                        <value>Do not store state</value>
-                    </entry>
-                    <entry>
-                        <key>Stateful Variables Initial Value</key>
-                    </entry>
-                    <entry>
-                        <key>canonical-value-lookup-cache-size</key>
-                        <value>100</value>
-                    </entry>
-                    <entry>
-                        <key>action</key>
-                        <value> ${action_key:isEmpty():ifElse('Delete','Insert/Update')}</value>
-                    </entry>
-                    <entry>
-                        <key>new</key>
-                        <value>${action_key}</value>
-                    </entry>
-                    <entry>
-                        <key>pk</key>
-                        <value>${kafka.key:replace('["',''):replace('"]','')}</value>
-                    </entry>
-                    <entry>
-                        <key>tbl</key>
-                        <value>${kafka.topic:replace('cis_json_',''):replace('bank_json_','')}</value>
-                    </entry>
-                    <entry>
-                        <key>ts</key>
-                        <value>${updated}</value>
-                    </entry>
-                    <entry>
-                        <key>ts1</key>
-                        <value>${updated:substring(0,13):toNumber():format('yyyy-MM-dd HH:mm:ss.SSS')}</value>
-                    </entry>
-                    <entry>
-                        <key>ts2</key>
-                        <value>${now():format('yyyy-MM-dd HH:mm:ss.SSS')}</value>
-                    </entry>
-                </properties>
-                <runDurationMillis>0</runDurationMillis>
-                <schedulingPeriod>0 sec</schedulingPeriod>
-                <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
-                <yieldDuration>1 sec</yieldDuration>
-            </config>
-            <executionNodeRestricted>false</executionNodeRestricted>
-            <name>UpdateAttribute</name>
-            <relationships>
-                <autoTerminate>false</autoTerminate>
-                <name>success</name>
-            </relationships>
-            <state>RUNNING</state>
-            <style/>
-            <type>org.apache.nifi.processors.attributes.UpdateAttribute</type>
-        </processors>
-        <processors>
-            <id>4bfb2677-5469-377e-0000-000000000000</id>
-            <parentGroupId>4cc8e40e-d473-39fb-0000-000000000000</parentGroupId>
-            <position>
-                <x>534.398681640625</x>
-                <y>362.5107116699219</y>
-            </position>
-            <bundle>
-                <artifact>nifi-standard-nar</artifact>
-                <group>org.apache.nifi</group>
-                <version>1.9.2</version>
-            </bundle>
-            <config>
-                <bulletinLevel>WARN</bulletinLevel>
-                <comments></comments>
-                <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
-                <descriptors>
-                    <entry>
-                        <key>record-reader</key>
-                        <value>
-                            <identifiesControllerService>org.apache.nifi.serialization.RecordReaderFactory</identifiesControllerService>
-                            <name>record-reader</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>record-writer</key>
-                        <value>
-                            <identifiesControllerService>org.apache.nifi.serialization.RecordSetWriterFactory</identifiesControllerService>
-                            <name>record-writer</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>include-zero-record-flowfiles</key>
-                        <value>
-                            <name>include-zero-record-flowfiles</name>
-                        </value>
-                    </entry>
-                </descriptors>
-                <executionNode>ALL</executionNode>
-                <lossTolerant>false</lossTolerant>
-                <penaltyDuration>30 sec</penaltyDuration>
-                <properties>
-                    <entry>
-                        <key>record-reader</key>
-                        <value>e3eb5250-61ee-34e1-0000-000000000000</value>
-                    </entry>
-                    <entry>
-                        <key>record-writer</key>
-                        <value>0758c916-e03f-3209-0000-000000000000</value>
-                    </entry>
-                    <entry>
-                        <key>include-zero-record-flowfiles</key>
-                        <value>true</value>
-                    </entry>
-                </properties>
-                <runDurationMillis>0</runDurationMillis>
-                <schedulingPeriod>0 sec</schedulingPeriod>
-                <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
-                <yieldDuration>1 sec</yieldDuration>
-            </config>
-            <executionNodeRestricted>false</executionNodeRestricted>
-            <name>ConvertRecord</name>
-            <relationships>
-                <autoTerminate>true</autoTerminate>
-                <name>failure</name>
-            </relationships>
-            <relationships>
-                <autoTerminate>false</autoTerminate>
-                <name>success</name>
-            </relationships>
-            <state>RUNNING</state>
-            <style/>
-            <type>org.apache.nifi.processors.standard.ConvertRecord</type>
-        </processors>
-        <processors>
-            <id>8e77d426-4fb5-35a9-0000-000000000000</id>
-            <parentGroupId>4cc8e40e-d473-39fb-0000-000000000000</parentGroupId>
+            <id>8c5eef9f-353e-3643-0000-000000000000</id>
+            <parentGroupId>00b2df8c-ef99-3949-0000-000000000000</parentGroupId>
             <position>
                 <x>0.940834252134664</x>
                 <y>184.46635930451134</y>
@@ -1314,228 +1539,13 @@
                 <autoTerminate>true</autoTerminate>
                 <name>unmatched</name>
             </relationships>
-            <state>RUNNING</state>
+            <state>STOPPED</state>
             <style/>
             <type>org.apache.nifi.processors.standard.EvaluateJsonPath</type>
         </processors>
         <processors>
-            <id>a9b8747f-9724-3faa-0000-000000000000</id>
-            <parentGroupId>4cc8e40e-d473-39fb-0000-000000000000</parentGroupId>
-            <position>
-                <x>538.6579851310412</x>
-                <y>182.2296392193673</y>
-            </position>
-            <bundle>
-                <artifact>nifi-standard-nar</artifact>
-                <group>org.apache.nifi</group>
-                <version>1.9.2</version>
-            </bundle>
-            <config>
-                <bulletinLevel>WARN</bulletinLevel>
-                <comments></comments>
-                <concurrentlySchedulableTaskCount>3</concurrentlySchedulableTaskCount>
-                <descriptors>
-                    <entry>
-                        <key>put-db-record-record-reader</key>
-                        <value>
-                            <identifiesControllerService>org.apache.nifi.serialization.RecordReaderFactory</identifiesControllerService>
-                            <name>put-db-record-record-reader</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>put-db-record-statement-type</key>
-                        <value>
-                            <name>put-db-record-statement-type</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>put-db-record-dcbp-service</key>
-                        <value>
-                            <identifiesControllerService>org.apache.nifi.dbcp.DBCPService</identifiesControllerService>
-                            <name>put-db-record-dcbp-service</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>put-db-record-catalog-name</key>
-                        <value>
-                            <name>put-db-record-catalog-name</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>put-db-record-schema-name</key>
-                        <value>
-                            <name>put-db-record-schema-name</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>put-db-record-table-name</key>
-                        <value>
-                            <name>put-db-record-table-name</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>put-db-record-translate-field-names</key>
-                        <value>
-                            <name>put-db-record-translate-field-names</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>put-db-record-unmatched-field-behavior</key>
-                        <value>
-                            <name>put-db-record-unmatched-field-behavior</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>put-db-record-unmatched-column-behavior</key>
-                        <value>
-                            <name>put-db-record-unmatched-column-behavior</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>put-db-record-update-keys</key>
-                        <value>
-                            <name>put-db-record-update-keys</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>put-db-record-field-containing-sql</key>
-                        <value>
-                            <name>put-db-record-field-containing-sql</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>put-db-record-quoted-identifiers</key>
-                        <value>
-                            <name>put-db-record-quoted-identifiers</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>put-db-record-quoted-table-identifiers</key>
-                        <value>
-                            <name>put-db-record-quoted-table-identifiers</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>put-db-record-query-timeout</key>
-                        <value>
-                            <name>put-db-record-query-timeout</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>rollback-on-failure</key>
-                        <value>
-                            <name>rollback-on-failure</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>table-schema-cache-size</key>
-                        <value>
-                            <name>table-schema-cache-size</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>put-db-record-max-batch-size</key>
-                        <value>
-                            <name>put-db-record-max-batch-size</name>
-                        </value>
-                    </entry>
-                </descriptors>
-                <executionNode>ALL</executionNode>
-                <lossTolerant>false</lossTolerant>
-                <penaltyDuration>30 sec</penaltyDuration>
-                <properties>
-                    <entry>
-                        <key>put-db-record-record-reader</key>
-                        <value>fba6d866-db6f-3eed-0000-000000000000</value>
-                    </entry>
-                    <entry>
-                        <key>put-db-record-statement-type</key>
-                        <value>INSERT</value>
-                    </entry>
-                    <entry>
-                        <key>put-db-record-dcbp-service</key>
-                        <value>f82b0997-c82d-38d0-0000-000000000000</value>
-                    </entry>
-                    <entry>
-                        <key>put-db-record-catalog-name</key>
-                        <value>cis</value>
-                    </entry>
-                    <entry>
-                        <key>put-db-record-schema-name</key>
-                    </entry>
-                    <entry>
-                        <key>put-db-record-table-name</key>
-                        <value>audit</value>
-                    </entry>
-                    <entry>
-                        <key>put-db-record-translate-field-names</key>
-                        <value>true</value>
-                    </entry>
-                    <entry>
-                        <key>put-db-record-unmatched-field-behavior</key>
-                        <value>Ignore Unmatched Fields</value>
-                    </entry>
-                    <entry>
-                        <key>put-db-record-unmatched-column-behavior</key>
-                        <value>Ignore Unmatched Columns</value>
-                    </entry>
-                    <entry>
-                        <key>put-db-record-update-keys</key>
-                    </entry>
-                    <entry>
-                        <key>put-db-record-field-containing-sql</key>
-                    </entry>
-                    <entry>
-                        <key>put-db-record-quoted-identifiers</key>
-                        <value>false</value>
-                    </entry>
-                    <entry>
-                        <key>put-db-record-quoted-table-identifiers</key>
-                        <value>false</value>
-                    </entry>
-                    <entry>
-                        <key>put-db-record-query-timeout</key>
-                        <value>0 seconds</value>
-                    </entry>
-                    <entry>
-                        <key>rollback-on-failure</key>
-                        <value>false</value>
-                    </entry>
-                    <entry>
-                        <key>table-schema-cache-size</key>
-                        <value>100</value>
-                    </entry>
-                    <entry>
-                        <key>put-db-record-max-batch-size</key>
-                        <value>1000</value>
-                    </entry>
-                </properties>
-                <runDurationMillis>0</runDurationMillis>
-                <schedulingPeriod>0 sec</schedulingPeriod>
-                <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
-                <yieldDuration>1 sec</yieldDuration>
-            </config>
-            <executionNodeRestricted>false</executionNodeRestricted>
-            <name>PutDatabaseRecord</name>
-            <relationships>
-                <autoTerminate>false</autoTerminate>
-                <name>failure</name>
-            </relationships>
-            <relationships>
-                <autoTerminate>false</autoTerminate>
-                <name>retry</name>
-            </relationships>
-            <relationships>
-                <autoTerminate>true</autoTerminate>
-                <name>success</name>
-            </relationships>
-            <state>RUNNING</state>
-            <style/>
-            <type>org.apache.nifi.processors.standard.PutDatabaseRecord</type>
-        </processors>
-        <processors>
-            <id>cd38a4eb-0c24-39c1-0000-000000000000</id>
-            <parentGroupId>4cc8e40e-d473-39fb-0000-000000000000</parentGroupId>
+            <id>c09a124f-282b-3d05-0000-000000000000</id>
+            <parentGroupId>00b2df8c-ef99-3949-0000-000000000000</parentGroupId>
             <position>
                 <x>263.3215105216659</x>
                 <y>571.653764890754</y>
@@ -1620,10 +1630,10 @@
                 <autoTerminate>false</autoTerminate>
                 <name>success</name>
             </relationships>
-            <state>RUNNING</state>
+            <state>STOPPED</state>
             <style/>
             <type>org.apache.nifi.processors.standard.AttributesToJSON</type>
         </processors>
     </snippet>
-    <timestamp>12/02/2019 22:33:11 UTC</timestamp>
+    <timestamp>01/07/2020 03:27:30 UTC</timestamp>
 </template>
