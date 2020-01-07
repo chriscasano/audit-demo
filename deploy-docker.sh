@@ -31,7 +31,8 @@ docker-compose exec -T roach-0 ./cockroach workload run bank --duration 10s "pos
 # Output IPs
 echo -e "******** Connect **************"
 echo -e "Kafka Broker: localhost:9092 "
-echo -e "NiFi UI: http://localhost:9090/nifi"
+echo -e "NiFi UI: http://localhost:9095/nifi"
+echo -e "Cockroach Admin UI: http://localhost:8090"
 echo -e "SQL (local crdb): cockroach sql --insecure --host localhost --port 5432 --database cis"
 echo -e "SQL (no local crdb): docker exec -it roach-0 /cockroach/cockroach.sh sql --insecure --host haproxy --port 5432 --database cis"
 echo -e "*******************************"
