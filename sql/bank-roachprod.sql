@@ -20,6 +20,12 @@ create table audit
   PRIMARY KEY (tbl, pk, ts)
 );
 
+CREATE TABLE bank2 (
+    id INT8 NOT NULL,
+    balance INT8 NULL,
+    payload STRING NULL,
+    PRIMARY KEY (id ASC)
+);
 
 use bank;
 
